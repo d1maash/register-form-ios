@@ -116,7 +116,8 @@ struct Login: View {
                         Text("Forget Password?").foregroundStyle(Color.white.opacity(0.6))
                     }
                 }.padding(.horizontal).padding(.top, 30)
-            }
+                
+            }.padding().padding(.bottom, 65).background(Color.blue).clipShape(CShape()).contentShape(CShape()).shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: -5)
         }
     }
 }
