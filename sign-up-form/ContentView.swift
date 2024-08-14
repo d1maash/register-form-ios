@@ -107,7 +107,15 @@ struct Login: View {
                     }
                     Divider()
                         .background(Color.white.opacity(0.5))
-                }.padding(.horizontal).padding(.top, 40)
+                }.padding(.horizontal).padding(.top, 30)
+                HStack {
+                    Spacer(minLength: 0)
+                    Button(action: {
+                        //
+                    }) {
+                        Text("Forget Password?").foregroundStyle(Color.white.opacity(0.6))
+                    }
+                }.padding(.horizontal).padding(.top, 30)
             }
         }
     }
