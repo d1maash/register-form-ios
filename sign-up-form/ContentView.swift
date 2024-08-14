@@ -15,7 +15,6 @@ struct ContentView: View {
                 
                 ZStack {
                     Text("Hello World")
-                    
                 }
                 HStack(spacing: 15) {
                     Rectangle().fill(Color.gray).frame(height: 1)
@@ -33,6 +32,11 @@ struct ContentView: View {
                         //
                     }) {
                         Image(systemName: "sun.max.circle").renderingMode(.original).frame(width: 50, height: 50).clipShape(Circle())
+                    }
+                    Button(action: {
+                        //
+                    }) {
+                        Image(systemName: "sun.max.trianglebadge.exclamationmark").renderingMode(.original).frame(width: 50, height: 50).clipShape(Circle())
                     }
                 }.padding(.top, 30)
             }.padding(.vertical)
