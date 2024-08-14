@@ -121,7 +121,14 @@ struct Login: View {
                 self.index = 0
             }
             .cornerRadius(35).padding(.horizontal, 25)
-        }
+            
+            Button(action: {
+                //
+            }) {
+                Text("Log In").foregroundColor(.white).fontWeight(.bold).padding(.vertical).padding(.horizontal, 50).background(Color.primary).clipShape(Capsule()).shadow(color: Color.white.opacity(0.1), radius: 5, x: 0, y: 5)
+            }
+        }.offset(y: 35)
+            .opacity(self.index == 0 ? 1 : 0)
     }
 }
 
