@@ -77,6 +77,19 @@ struct Login: View {
     @State var email = ""
     @State var pass = ""
     @Binding var index: Int
+    
+    
+    var body: some View {
+        ZStack(alignment: .bottom) {
+            VStack {
+                HStack {
+                    VStack(spacing: 10) {
+                        Text("Login").foregroundColor(self.index == 0 ? .white : .gray)
+                    }
+                }
+            }
+        }
+    }
 }
 
 #Preview {
