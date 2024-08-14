@@ -153,6 +153,18 @@ struct SignUp: View {
                     }
                 }
                 .padding(.top, 30)
+                
+                VStack {
+                    HStack(spacing: 15) {
+                        Image(systemName: "envelope.fill")
+                            .foregroundColor(Color.green)
+                        TextField("Email addres", text: self.$email)
+                    }
+                    Divider().background(Color.white.opacity(0.5))
+                }
+                .padding(.horizontal).padding(.top, 40)
+                
+                
                 VStack {
                     HStack(spacing: 15) {
                         Image(systemName: "eye.slash.fill").foregroundColor(Color.green)
@@ -192,6 +204,8 @@ struct SignUp: View {
                     .clipShape(Capsule())
                     .shadow(color: .white.opacity(0.1), radius: 5, x: 0, y: -5)
             }
+            .offset(y: 25)
+            .opacity(self.index == 1 ? 1 : 0)
         }
     }
 }
