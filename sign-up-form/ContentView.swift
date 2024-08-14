@@ -183,7 +183,15 @@ struct SignUp: View {
                     
                 }
                 .cornerRadius(35)
-            
+            Button(action: {
+                //
+            }) {
+                Text("SignUp").foregroundColor(.white).fontWeight(.bold)
+                    .padding(.vertical)
+                    .padding(.horizontal, 50)
+                    .clipShape(Capsule())
+                    .shadow(color: .white.opacity(0.1), radius: 5, x: 0, y: -5)
+            }
         }
     }
 }
