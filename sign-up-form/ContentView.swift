@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var index = 0
+    
     var body: some View {
         GeometryReader { _ in
             VStack {
@@ -39,9 +42,41 @@ struct ContentView: View {
                         Image(systemName: "sun.max.trianglebadge.exclamationmark").renderingMode(.original).frame(width: 50, height: 50).clipShape(Circle())
                     }
                 }.padding(.top, 30)
-            }.padding(.vertical)
-        }.background(Color.white).edgesIgnoringSafeArea(.all)
+            }.padding(.vertical, 200)
+        }.background(Color.black.edgesIgnoringSafeArea(.all)).preferredColorScheme(.dark
+        )
     }
+}
+
+
+struct CShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        return Path {
+            path in path.move(to: CGPoint(x: rect.width, y: 100))
+            path.addLine(to: CGPoint(x: rect.width, y: rect.height))
+            path.addLine(to: CGPoint(x: 0, y: rect.height))
+            path.addLine(to: CGPoint(x: 0, y: 0))
+        }
+    }
+}
+
+
+struct CShape1: Shape {
+    func path(in rect: CGRect) -> Path {
+        return Path {
+            path in path.move(to: CGPoint(x: 0, y: 100))
+            path.addLine(to: CGPoint(x: 0, y: rect.height))
+            path.addLine(to: CGPoint(x: rect.width, y: rect.height))
+            path.addLine(to: CGPoint(x: rect.width, y: 0))
+        }
+    }
+}
+
+
+struct Login: View {
+    @State var email = ""
+    @State var pass = ""
+    @Binding var index: Int
 }
 
 #Preview {
