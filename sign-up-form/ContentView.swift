@@ -84,7 +84,7 @@ struct Login: View {
             VStack {
                 HStack {
                     VStack(spacing: 10) {
-                        Text("Login").foregroundColor(self.index == 0 ? .white : .gray)
+                        Text("Login").foregroundColor(self.index == 0 ? .white : .gray).font(.title).fontWeight(.bold)
                     }
                 }
             }
