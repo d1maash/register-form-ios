@@ -132,6 +132,28 @@ struct Login: View {
     }
 }
 
+
+
+struct SignUp: View {
+    @State var email = ""
+    @State var pass = ""
+    @State var Repass = ""
+    @Binding var index: Int
+    
+    var body: some View {
+        ZStack(alignment: .bottom) {
+            VStack {
+                HStack {
+                    Spacer(minLength: 0)
+                    VStack(spacing: 10) {
+                        Text("SignUp").foregroundColor(self.index == 1 ? .white : .gray)
+                    }
+                }
+            }
+        }
+    }
+}
+
 #Preview {
     ContentView()
 }
