@@ -34,9 +34,9 @@ struct ContentView: View {
                     }) {
                         Image(systemName: "sun.max.circle").renderingMode(.original).frame(width: 50, height: 50).clipShape(Circle())
                     }
-                }
-            }
-        }
+                }.padding(.top, 30)
+            }.padding(.vertical)
+        }.background(Color.white).edgesIgnoringSafeArea(.all)
     }
 }
 
