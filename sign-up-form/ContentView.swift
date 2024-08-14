@@ -163,7 +163,22 @@ struct SignUp: View {
                         .background(Color.white.opacity(0.5))
                 }.padding(.horizontal)
                     .padding(.top, 30)
+                
+                VStack {
+                    HStack(spacing: 15) {
+                        Image(systemName: "eye.slash.fill")
+                            .foregroundColor(Color.green)
+                        SecureField("Password", text: self.$Repass)
+                    }
+                    Divider().background(Color.white.opacity(0.5))
+                }.padding(.horizontal)
+                    .padding(.top, 30)
             }
+            .padding().padding(.bottom, 65)
+            background(Color.green).clipShape(CShape1())
+                .contentShape(CShape1())
+                .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: -5)
+            
         }
     }
 }
