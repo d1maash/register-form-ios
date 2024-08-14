@@ -178,6 +178,11 @@ struct SignUp: View {
             background(Color.green).clipShape(CShape1())
                 .contentShape(CShape1())
                 .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: -5)
+                .onTapGesture {
+                    self.index = 1
+                    
+                }
+                .cornerRadius(35)
             
         }
     }
