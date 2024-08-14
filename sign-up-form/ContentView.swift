@@ -102,8 +102,8 @@ struct Login: View {
                 
                 VStack {
                     HStack(spacing: 15) {
-                        Image(systemName: "envelop.fill").foregroundColor(Color.white)
-                        TextField("Email Address", text: self.$email)
+                        Image(systemName: "eye.slash.fill").foregroundColor(Color.white)
+                        TextField("Password", text: self.$pass)
                     }
                     Divider()
                         .background(Color.white.opacity(0.5))
