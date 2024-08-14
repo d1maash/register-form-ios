@@ -154,10 +154,15 @@ struct SignUp: View {
                 }
                 .padding(.top, 30)
                 VStack {
-                    HStack {
-                        
+                    HStack(spacing: 15) {
+                        Image(systemName: "eye.slash.fill").foregroundColor(Color.green)
+                        SecureField("Password", text: self.$pass)
                     }
-                }
+                    Divider()
+                    
+                        .background(Color.white.opacity(0.5))
+                }.padding(.horizontal)
+                    .padding(.top, 30)
             }
         }
     }
