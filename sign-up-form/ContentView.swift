@@ -92,11 +92,22 @@ struct Login: View {
                 }.padding(.top, 30)
                 
                 VStack {
-                    HStack {
+                    HStack(spacing: 15) {
                         Image(systemName: "envelop.fill").foregroundColor(Color.white)
                         TextField("Email Address", text: self.$email)
                     }
-                }
+                    Divider()
+                        .background(Color.white.opacity(0.5))
+                }.padding(.horizontal).padding(.top, 40)
+                
+                VStack {
+                    HStack(spacing: 15) {
+                        Image(systemName: "envelop.fill").foregroundColor(Color.white)
+                        TextField("Email Address", text: self.$email)
+                    }
+                    Divider()
+                        .background(Color.white.opacity(0.5))
+                }.padding(.horizontal).padding(.top, 40)
             }
         }
     }
