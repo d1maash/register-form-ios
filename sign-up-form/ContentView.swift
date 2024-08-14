@@ -86,7 +86,15 @@ struct Login: View {
                     VStack(spacing: 10) {
                         Text("Login").foregroundColor(self.index == 0 ? .white : .gray).font(.title).fontWeight(.bold)
                         Capsule()
-                            .fill(self.index == 0 ? Color.blue : Color.clear)
+                            .fill(self.index == 0 ? Color.blue : Color.clear).frame(width: 100, height: 5)
+                    }
+                    Spacer()
+                }.padding(.top, 30)
+                
+                VStack {
+                    HStack {
+                        Image(systemName: "envelop.fill").foregroundColor(Color.white)
+                        TextField("Email Address", text: self.$email)
                     }
                 }
             }
