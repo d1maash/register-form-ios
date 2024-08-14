@@ -117,7 +117,10 @@ struct Login: View {
                     }
                 }.padding(.horizontal).padding(.top, 30)
                 
-            }.padding().padding(.bottom, 65).background(Color.blue).clipShape(CShape()).contentShape(CShape()).shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: -5)
+            }.padding().padding(.bottom, 65).background(Color.blue).clipShape(CShape()).contentShape(CShape()).shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: -5).onTapGesture {
+                self.index = 0
+            }
+            .cornerRadius(35).padding(.horizontal, 25)
         }
     }
 }
