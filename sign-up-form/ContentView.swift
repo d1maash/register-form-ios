@@ -146,7 +146,16 @@ struct SignUp: View {
                 HStack {
                     Spacer(minLength: 0)
                     VStack(spacing: 10) {
-                        Text("SignUp").foregroundColor(self.index == 1 ? .white : .gray)
+                        Text("SignUp").foregroundColor(self.index == 1 ? .white : .gray).font(.title).fontWeight(.bold)
+                        
+                        Capsule()
+                            .fill(self.index == 1 ? Color.blue : Color.clear).frame(width: 100, height: 5)
+                    }
+                }
+                .padding(.top, 30)
+                VStack {
+                    HStack {
+                        
                     }
                 }
             }
